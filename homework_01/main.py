@@ -4,15 +4,12 @@
 """
 
 
-def power_numbers(*n):
-    for num in n:
+def power_numbers(*numbers):
+    for num in numbers:
         if (str(num).isdigit()):
-            print(num ** 2)
+            result = num ** 2
+        return result
 
-
-power_numbers(1, 2, 5, 7, 4.4)
-
-print("__________________________________")
 
 
 def is_prime(*n):
