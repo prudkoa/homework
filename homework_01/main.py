@@ -5,21 +5,19 @@
 
 
 def power_numbers(*numbers):
-    mylist = []
+    list = []
     for num in numbers:
         if (str(num).isdigit()):
             result = num ** 2
-            mylist.append(result)
-    return mylist
+            list.append(result)
+    return list
 
 
 def is_prime(number):
     for divider in range(2, number):
-        if number % divider == 0: return False
+        if number % divider == 0:
+            return False
     return True
-
-
-
 
 # filter types
 ODD = "odd"
@@ -45,4 +43,4 @@ def filter_numbers(numbers, filter):
             if is_prime(num):
                 mylist.append(num)
                 print(mylist)
-        return  mylist
+        return mylist
