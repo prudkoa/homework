@@ -25,22 +25,14 @@ EVEN = "even"
 PRIME = "prime"
 
 
-def filter_numbers(numbers, filter):
+def filter_numbers(numbers, type):
     mylist = []
-    if filter == ODD:
-        for num in numbers:
-            if num % 2 == 1:
-                mylist.append(num)
-        return mylist
-    if filter == EVEN:
-        for num in numbers:
-            if num % 2 != 1:
-                mylist.append(num)
-                print(mylist)
-        return mylist
-    if filter == PRIME:
+    if type == ODD:
+        return list(filter(lambda num: num % 2 == 1, numbers))
+    if type == EVEN:
+        return list(filter(lambda num: num % 2 != 1, numbers))
+    if type == PRIME:
         for num in numbers:
             if is_prime(num):
                 mylist.append(num)
-                print(mylist)
         return mylist
