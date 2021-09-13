@@ -32,7 +32,5 @@ def filter_numbers(numbers, type):
     if type == EVEN:
         return list(filter(lambda num: num % 2 != 1, numbers))
     if type == PRIME:
-        for num in numbers:
-            if is_prime(num):
-                mylist.append(num)
-        return mylist
+        return list(filter(lambda num:  is_prime(num) , numbers))
+
